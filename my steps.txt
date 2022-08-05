@@ -1,2 +1,4 @@
 in order to run "sh" commands on windows one need to install it. see this:
 https://stackoverflow.com/questions/45140614/jenkins-pipeline-sh-fail-with-cannot-run-program-nohup-on-windows
+
+https://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
