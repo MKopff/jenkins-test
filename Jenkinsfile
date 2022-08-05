@@ -5,9 +5,10 @@ pipeline {
             steps {
                 echo "Hello World!"
                 bat "echo Hello from the shell..."
-                bat "cd C:\\Users\\FREUN\\Videos\\docker\\selenide"
-                bat "mvn test -Dtest='test.java.MyTest'"
+//                 https://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException - it helped me to choose the right path
+                bat "mvn -f C:\\Users\\FREUN\\Videos\\docker\\selenide test -Dtest='test.java.MyTest'"
             }
         }
     }
 }
+
