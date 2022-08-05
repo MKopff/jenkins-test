@@ -25,17 +25,18 @@ pipeline {
     }
 }
 
-stage("run tests") {
+stages {
+    stage("run tests") {
+        steps {
+            echo "Hello World!"
 
-    steps {
-        echo "Hello World!"
+            if(params.MyTest) {
+                bat "mvn test -Dtest=\"test.java.MyTest\""
+            }
 
-        if(params.MyTest) {
-            bat "mvn test -Dtest=\"test.java.MyTest\""
-        }
-
-        if(params.Test2) {
-            bat "mvn test -Dtest=\"test.java.Test2\""
+            if(params.Test2) {
+                bat "mvn test -Dtest=\"test.java.Test2\""
+            }
         }
     }
 }
