@@ -27,12 +27,14 @@ pipeline {
     stages {
         stage("run tests") {
             steps {
-                if(params.MyTest) {
-                    bat "mvn test -Dtest=\"test.java.MyTest\""
-                }
+                script {
+                    if(params.MyTest) {
+                        bat "mvn test -Dtest=\"test.java.MyTest\""
+                    }
 
-                if(params.Test2) {
-                    bat "mvn test -Dtest=\"test.java.Test2\""
+                    if(params.Test2) {
+                        bat "mvn test -Dtest=\"test.java.Test2\""
+                    }
                 }
             }
         }
