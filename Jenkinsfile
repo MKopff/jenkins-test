@@ -19,7 +19,7 @@ pipeline {
                 description: "launch MyTest class"
         )
         booleanParam(name: "Test2",
-                defaultValue: false,
+                defaultValue: true,
                 description: "launch Test2 class"
         )
     }
