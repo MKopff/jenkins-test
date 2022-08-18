@@ -3,7 +3,7 @@
 <suite name="All MyTest Suite">
     <test verbose="2" preserve-order="true" name="MyTest.java">
         <classes>
-            <class name="test.java.MyTest"/>
+            <class name="MyTest"/>
             <class name="test.java.Test2"/>
         </classes>
     </test>
