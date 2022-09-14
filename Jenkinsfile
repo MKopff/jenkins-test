@@ -22,14 +22,14 @@ pipeline {
             steps {
                 script {
                     if(params.Test1) {
-                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test1 test'"
+                        bat "docker exec -ti prototype sh -c \"mvn -Dtest=test/Test1 test\""
                     }
 
                     if(params.Test2) {
-                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test2 test'"
+                        bat "docker exec -ti prototype sh -c \"mvn -Dtest=test/Test2 test\""
                     }
                     if(params.Test3) {
-                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test3 test'"
+                        bat "docker exec -ti prototype sh -c \"mvn -Dtest=test/Test3 test\""
                     }
                 }
             }
