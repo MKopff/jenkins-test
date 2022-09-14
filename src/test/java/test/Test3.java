@@ -13,6 +13,12 @@ public class Test3 {
 
     @BeforeAll
     public static void openProcess() {
+//        System.setProperty("webdriver.chrome.driver", "/app/bin/chromedriver");
+//        System.setProperty("selenide.browser", "Chrome");
+//        Configuration.browserSize = "1920x1080";
+//        Configuration.timeout = 70000;
+//        Configuration.headless = false;
+
         String url = "https://selenide.org/quick-start.html";
         Configuration.headless = true;
         open(url);
