@@ -1,4 +1,20 @@
 in order to run "sh" commands on windows one need to install it. see this:
 https://stackoverflow.com/questions/45140614/jenkins-pipeline-sh-fail-with-cannot-run-program-nohup-on-windows
 
+
+
 https://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+
+
+
+
+Accessing the Docker container in jenkins:
+https://www.infoworld.com/article/3637829/continuous-integration-with-docker-and-jenkins.html#:~:text=Go%20to%20Manage%20Jenkins%20%2D%3E%20Plugins,Configure%20Clouds%20on%20the%20left.
+
+Add the Docker plug-in
+There are several Docker plug-ins available. We’ll use the one imaginatively named “Docker plugin,” which gives you a lot of power with minimum configuration. For more detailed control, you might consider the docker-build-step plug-in, or switching to a pipeline build.
+Go to Manage Jenkins -> Plugins -> Available and type “docker” into the field. Select “Docker plugin” and install it.
+Jenkins refers to the Docker plugin as a “cloud.” Click Manage Jenkins once again, and now click the Manage Clouds and Nodes button in the middle. Now click Configure Clouds on the left.
+This will allow you to access the bridge network you created earlier and connect to the container running Docker.
+For the name, use something you’ll recognize like “Docker.” Click Docker Cloud Details to expose the Docker Host URI field, and enter “tcp://docker:2375” there.
+Save it and return to the Jenkins dashboard.
