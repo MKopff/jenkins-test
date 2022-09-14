@@ -23,7 +23,7 @@ pipeline {
                 script {
                     if(params.Test1) {
 //                         bat "docker exec -ti prototype sh -c \"mvn -Dtest=test/Test1 test\""
-                        docker exec -ti prototype sh -c "mvn -Dtest=test/Test1 test" bat
+                        docker exec -ti prototype sh -c "mvn -Dtest=test/Test1 test" bash
                     }
 
                     if(params.Test2) {
