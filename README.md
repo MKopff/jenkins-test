@@ -64,3 +64,8 @@ Commands:
     docker exec -ti prototype sh -c "mvn -Dtest=test/Test3 test"
 ```
 
+##Useful articles
+```dbn-psql
+https://www.infoworld.com/article/3123117/open-source-java-projects-jenkins-with-docker-part-1.html
+https://www.infoworld.com/article/3637829/continuous-integration-with-docker-and-jenkins.html 
+```
