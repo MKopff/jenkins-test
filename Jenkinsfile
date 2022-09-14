@@ -1,15 +1,4 @@
-// pipeline {
-//     agent any
-//     stages {
-//         stage('Test') {
-//             steps {
-//                 echo "Hello World!"
-//                 bat "echo Hello from the shell..."
-//                 bat "mvn test -Dtest=\"MyTest\"" // run the first step in particular (not all of the tests at once)
-//             }
-//         }
-//     }
-// }
+
 
 pipeline {
     agent any
@@ -33,14 +22,14 @@ pipeline {
             steps {
                 script {
                     if(params.Test1) {
-                        bat "mvn -Dtest=test/Test1 test"
+                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test1 test'"
                     }
 
                     if(params.Test2) {
-                        bat "mvn -Dtest=test/Test1 test"
+                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test2 test'"
                     }
                     if(params.Test3) {
-                        bat "mvn -Dtest=test/Test1 test"
+                        bat "docker exec -ti prototype sh -c 'mvn -Dtest=test/Test3 test'"
                     }
                 }
             }

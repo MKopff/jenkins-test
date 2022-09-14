@@ -1,0 +1,12 @@
+whenever I run an existing container again (I closed previous one and then tried to run it again) I see that before executing tests maven downloads all the dependencies again.
+I think that happens because I didn't include the downloading dependencies step in the dockerfile.
+Trying to read this: https://nieldw.medium.com/caching-maven-dependencies-in-a-docker-build-dca6ca7ad612
+- solved by adding the "RUN mvn package" command at the end of the dockerfile
+
+To update the source code of an app in the existing container i just re-build it (docker rebuilds only the code base since everything else hasn't change)
+https://stackoverflow.com/a/70159286/18197970 - also read this
+
+Working with docker via Jenkins
+- check if the container exists
+- if not, run it
+- if yes - execute the commands (tests)
