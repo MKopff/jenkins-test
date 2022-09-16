@@ -43,7 +43,7 @@ pipeline {
 //                     }
 //                     if(params.Test3) {
 //                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test3 test\""
-                    }
+//                     }
                 }
             }
         }
