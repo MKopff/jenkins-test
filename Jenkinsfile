@@ -27,6 +27,7 @@ pipeline {
                     // rather than on a new node entirely:
                     reuseNode true
                 }
+            }
             steps {
                 script {
                     if(params.Test1) {
@@ -48,6 +49,6 @@ pipeline {
         }
     }
 }
-}
+
 
 
