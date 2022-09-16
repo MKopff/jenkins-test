@@ -37,10 +37,10 @@ mvn -Dtest=test/Test3 test
 ## Working with docker container
 ```
 To build the docker image (dot at the end is mandatory):
-    docker build -t selenium_docker_sample .
+    docker build -t prototype .
 
 To run the docker image:
-    docker run -it selenium_docker_sample
+    docker run -it prototype
 
 it may be useful???
 Once the execution is completed, the reports would have got created withing the Docker Container. 
