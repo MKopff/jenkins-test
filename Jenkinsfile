@@ -41,19 +41,14 @@ pipeline {
             steps {
                 script {
                     if(params.Test1) {
-//                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test1 test\""
-                        bat "docker exec -it heuristic_germain sh -c \"mvn -Dtest=test/Test1 test\""
-//                         docker exec -ti prototype sh -c "mvn -Dtest=test/Test1 test" bash
-//                         bat "mvn clean test"
-
+                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test1 test\""
                     }
-//
-//                     if(params.Test2) {
-//                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test2 test\""
-//                     }
-//                     if(params.Test3) {
-//                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test3 test\""
-//                     }
+                    if(params.Test2) {
+                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test2 test\""
+                    }
+                    if(params.Test3) {
+                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test3 test\""
+                    }
                 }
             }
         }
