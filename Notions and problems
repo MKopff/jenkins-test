@@ -10,3 +10,8 @@ Working with docker via Jenkins
 - check if the container exists
 - if not, run it
 - if yes - execute the commands (tests)
+
+
+
+docker run -it prototype - creates a new container every time.
+How to launch the same one when it's needed?

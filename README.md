@@ -41,6 +41,11 @@ To build the docker image (dot at the end is mandatory):
 
 To run the docker image:
     docker run -it prototype
+    docker run -it --name prototype prototype    - this command assigns name to a container 
+                                                   and runs it in the interactive mode
+                                                   docker run -it --name container_name image_name
+https://www.tecmint.com/name-docker-containers/#:~:text=How%20to%20Name%20a%20Docker,print%20the%20new%20container%20ID.
+
 
 it may be useful???
 Once the execution is completed, the reports would have got created withing the Docker Container. 
