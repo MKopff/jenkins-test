@@ -37,12 +37,12 @@ pipeline {
 //                         bat "mvn clean test"
 
                     }
-
-                    if(params.Test2) {
-                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test2 test\""
-                    }
-                    if(params.Test3) {
-                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test3 test\""
+//
+//                     if(params.Test2) {
+//                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test2 test\""
+//                     }
+//                     if(params.Test3) {
+//                         bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test3 test\""
                     }
                 }
             }
