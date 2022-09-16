@@ -19,15 +19,15 @@ pipeline {
 
     stages {
         stage("run tests") {
-//             agent {
-//                 docker {
-//                     image 'prototype'
-//                     // Run the container on the node specified at the
-//                     // top-level of the Pipeline, in the same workspace,
-//                     // rather than on a new node entirely:
-//                     reuseNode true
-//                 }
-//             }
+            agent {
+                docker {
+                    image 'prototype'
+                    // Run the container on the node specified at the
+                    // top-level of the Pipeline, in the same workspace,
+                    // rather than on a new node entirely:
+                    reuseNode true
+                }
+            }
             steps {
                 script {
                     if(params.Test1) {
