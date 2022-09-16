@@ -6,6 +6,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Date;
+
 import static com.codeborne.selenide.Selenide.*;
 
 //https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html
@@ -37,6 +41,21 @@ public class Test1 {
         System.out.println("TEST1");
         String test = $(By.id("start-writing-test")).getText();
         System.out.println("\n\n" + test + "\n\n");
+
+        String path = "src/test/resources/current-session.txt";
+        Date date = new Date();
+
+        String time = String.valueOf(date.getTime());
+
+        try {
+            FileWriter myWriter = new FileWriter(path);
+            myWriter.write(time);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
     @Test

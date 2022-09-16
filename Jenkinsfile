@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     if(params.Test1) {
-                        bat "docker exec -it prototype sh -c \"mvn -Dtest=test/Test1 test\""
+                        bat "docker exec prototype sh -c \"mvn -Dtest=test/Test1 test\""
 //                         docker exec -it prototype sh -c "mvn -Dtest=test/Test1 test"
                     }
                     if(params.Test2) {
