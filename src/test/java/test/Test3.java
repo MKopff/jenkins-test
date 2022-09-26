@@ -20,6 +20,7 @@ public class Test3 {
 //        Configuration.headless = false;
 
         String url = "https://selenide.org/quick-start.html";
+        System.setProperty("webdriver.chrome.driver","/app/chrome-linux/chromedriver");
         Configuration.headless = true;
         open(url);
     }
