@@ -37,5 +37,7 @@ RUN apt-get -y install /app/chrome-linux/google-chrome-stable_105.0.5195.52-1_am
 #Step 6: Making our working directory as /app
 WORKDIR /app
 
+EXPOSE 4444
+
 #Step 7: Upload all the maven dependencies
 RUN mvn package -X -DskipTests
