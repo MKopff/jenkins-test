@@ -1,3 +1,5 @@
+изменения
+
 ## Discription
 
 ```
@@ -20,7 +22,10 @@ The Ideas I have found so far:
 usefull articles 
     https://stackoverflow.com/questions/70955307/how-to-install-google-chrome-in-a-docker-container
     https://migueldoctor.medium.com/how-to-create-a-custom-docker-image-with-jdk8-maven-and-gradle-ddc90f41cee4
-    
+
+
+Docker + docker compose for selenium tests:
+https://medium.com/@zvisno/running-selenium-tests-with-docker-a484186cd3d    
 ```
 
 ## Run tests from command line

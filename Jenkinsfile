@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+//     agent
+    agent { docker { image 'prototype:latest' } }
     parameters {
        booleanParam(name: 'Test1', defaultValue: false, description: 'launch Test1 class')
        booleanParam(name: 'Test2', defaultValue: false, description: 'launch Test2 class')
@@ -18,7 +19,8 @@ pipeline {
                 script {
                 //"-it" - docker interactive mode doesn't work here (at least on Windows)
                     if(params.Test1) {
-                        bat "docker exec prototype sh -c \"mvn -Dtest=test/Test1 test\""
+                        sh "mvn -Dtest=test/Test1 test"
+//                         bat "docker exec prototype sh -c \"mvn -Dtest=test/Test1 test\""
 //                         docker exec -it prototype sh -c "mvn -Dtest=test/Test1 test"
                     }
                     if(params.Test2) {
