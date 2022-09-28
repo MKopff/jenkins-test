@@ -1,6 +1,5 @@
 pipeline {
-//     agent
-    agent { docker { image 'prototype:latest' } }
+    agent any
     parameters {
        booleanParam(name: 'Test1', defaultValue: false, description: 'launch Test1 class')
        booleanParam(name: 'Test2', defaultValue: false, description: 'launch Test2 class')
@@ -15,6 +14,7 @@ pipeline {
         }
 
         stage("run tests") {
+            agent { docker { image 'prototype:latest' } }
             steps {
                 script {
                 //"-it" - docker interactive mode doesn't work here (at least on Windows)
