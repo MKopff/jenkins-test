@@ -37,7 +37,17 @@ RUN apt-get -y install /app/chrome-linux/google-chrome-stable_105.0.5195.52-1_am
 #Step 6: Making our working directory as /app
 WORKDIR /app
 
-EXPOSE 4444
+# EXPOSE 4444
 
 #Step 7: Upload all the maven dependencies
-RUN mvn package -X -DskipTests
+# RUN mvn package -X -DskipTests
+
+# Enable SSH access to the container:
+# took from here https://www.techrepublic.com/article/deploy-docker-container-ssh-access/
+RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:PASSWORD' | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
