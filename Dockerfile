@@ -22,7 +22,8 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-
+# Install GIT
+RUN apt-get -y install git
 
 # Step 1: Install pre-requisites
 RUN apt-get update
